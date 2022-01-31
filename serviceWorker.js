@@ -5,7 +5,7 @@ const assets = [
   "/",
   "/index.html",
   "/favicon.svg",
-  "/icon.svg",
+  "/img/icon.svg",
   "/style.css",
   "/script.js",
   "/css/roboto/style.css",
