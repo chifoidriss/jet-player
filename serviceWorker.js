@@ -3,14 +3,14 @@
 const cacheName = "Jet-player";
 const assets = [
   "/",
-  "index.html",
-  "favicon.svg",
-  "img/icon.svg",
-  "style.css",
-  "script.js",
-  "css/roboto/style.css",
-  "css/fontawesome-all.min.css",
-  "js/jquery.min.js",
+  "/index.html",
+  "/favicon.svg",
+  "/img/icon.svg",
+  "/style.css",
+  "/script.js",
+  "/css/roboto/style.css",
+  "/css/fontawesome-all.min.css",
+  "/js/jquery.min.js",
 ];
 
 self.addEventListener("install", installEvent => {
