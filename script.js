@@ -108,13 +108,16 @@ function nextSong() {
 }
 
 function playSongByIndex(i) {
-  if (i === songIndex) {
-    togglePlay();
-  } else {
-    songIndex = i;
-    loadSong(songs[songIndex]);
-    playSong();
-  }
+  // if (i === songIndex) {
+  //   togglePlay();
+  // } else {
+  //   songIndex = i;
+  //   loadSong(songs[songIndex]);
+  //   playSong();
+  // }
+  songIndex = i;
+  loadSong(songs[songIndex]);
+  playSong();
 }
 
 // Update progress bar
@@ -154,12 +157,14 @@ function setProgress(e) {
 function togglePlay() {
   const isPlaying = musicContainer.classList.contains('play');
 
-  if (audio.getAttribute('src')) {
+  if (songs.length > 0) {
     if (isPlaying) {
       pauseSong();
     } else {
       playSong();
     }
+  } else {
+    songInput.click();
   }
 }
 
@@ -184,7 +189,7 @@ songInput.addEventListener('change', (e) => {
 
   const files = e.target.files;
   addSongsFiles(files);
-  
+
   songInput.value = null;
 });
 
