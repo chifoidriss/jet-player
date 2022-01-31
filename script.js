@@ -20,16 +20,16 @@ const songInput = document.getElementById('song-input');
 
 // Song titles
 const songs = [
-  {name: 'Hey', src: 'music/hey.mp3', cover: 'images/hey.jpg'},
-  {name: 'Summer', src: 'music/summer.mp3', cover: 'images/summer.jpg'},
-  {name: 'Ukulele', src: 'music/ukulele.mp3', cover: 'images/ukulele.jpg'}
+  // {name: 'Hey', src: 'music/hey.mp3', cover: 'images/hey.jpg'},
+  // {name: 'Summer', src: 'music/summer.mp3', cover: 'images/summer.jpg'},
+  // {name: 'Ukulele', src: 'music/ukulele.mp3', cover: 'images/ukulele.jpg'}
 ];
 
 // Keep track of song
 let songIndex = 0;
 
 // Initially load song details into DOM
-loadSong(songs[songIndex]);
+// loadSong(songs[songIndex]);
 
 // Update song details
 function loadSong(song) {
@@ -154,10 +154,12 @@ function setProgress(e) {
 function togglePlay() {
   const isPlaying = musicContainer.classList.contains('play');
 
-  if (isPlaying) {
-    pauseSong();
-  } else {
-    playSong();
+  if (audio.getAttribute('src')) {
+    if (isPlaying) {
+      pauseSong();
+    } else {
+      playSong();
+    }
   }
 }
 

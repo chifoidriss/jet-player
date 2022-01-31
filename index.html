@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+    <meta name="theme-color" content="#db4938" />
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <title>Jet Player</title>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -8,11 +14,8 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="css/roboto/style.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Jet Player</title>
-
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="favicon.svg">
   </head>
+
   <body>
     <main class="main" id="main" draggable="true">
       <h1>Jet Player</h1>
@@ -42,7 +45,7 @@
         <audio src="" id="audio"></audio>
   
         <div class="img-container">
-          <img src="" alt="music-cover" id="cover" />
+          <img src="/icon.svg" alt="music-cover" id="cover" />
         </div>
         
         <div class="navigation">
